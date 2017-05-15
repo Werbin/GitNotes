@@ -92,3 +92,4 @@ vi index.md(在git bash中编辑文件)
 
 git merge --no-ff -m '提示信息' MyBranch (才用非Fast forward模式合并，合并后可以看出曾经做过合并)
 ```
+测试一个小功能
