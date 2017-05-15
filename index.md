@@ -42,9 +42,13 @@ git branch MyBranch (创建分支)
 
 git checkout MyBranch (切换分支)
 
+git checkout -b MyBranch (创建并切换分支，相当于合并上面两步)
+
 git checkout master (切换到主分支)
 
 git merge MyBranch (合并分支)
+
+git branch -d MyBranch(删除分支)
 
 git add . (先添加)
 
