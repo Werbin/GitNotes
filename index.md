@@ -91,5 +91,6 @@ git clone git@github.com:HaoChuan9421/GitNotes.git(克隆远端仓库)
 vi index.md(在git bash中编辑文件)
 
 git merge --no-ff -m '提示信息' MyBranch (才用非Fast forward模式合并，合并后可以看出曾经做过合并)
+
+git创建分支时，会以当前所在分支为模版创建
 ```
-测试一个小功能
