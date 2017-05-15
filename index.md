@@ -114,4 +114,3 @@ git branch --set-upstream-to=origin/test(远端有分支，本地没分支时，
 
 git pull (拉取远端最新的代码)
 ```
-pull和本地的有冲突，修改一下
