@@ -110,5 +110,7 @@ git checkout -b dev origin/dev (git clone下来的只有master分支，如果需
 
 git branch --set-upstream dev origin/dev (设置本地分支与远端分支的链接，否则无法pull)
 
+git branch --set-upstream-to=origin/test(远端有分支，本地没分支时，现在本地创建，然后关联到远端)
+
 git pull (拉取远端最新的代码)
 ```
