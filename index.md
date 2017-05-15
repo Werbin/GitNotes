@@ -88,4 +88,4 @@ $ ssh-keygen -t rsa -C "youremail@example.com"(生成ssh，一路回车，使用
 
 git clone git@github.com:HaoChuan9421/GitNotes.git(克隆远端仓库)
 ```
-学习版本冲突
+学习版本冲突,master也改一点
