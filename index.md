@@ -105,4 +105,10 @@ git创建分支时，会以当前所在分支为模版创建
 git remote -v (查看远端仓库信息，如果没有push权限会只显示fetch)
 
 git push origin dev(push到远端仓库dev分支)
+
+git checkout -b dev origin/dev (git clone下来的只有master分支，如果需要其他分支，如dev分支则需要执行这个命令)
+
+git branch --set-upstream dev origin/dev (设置本地分支与远端分支的链接，否则无法pull)
+
+git pull (拉取远端最新的代码)
 ```
