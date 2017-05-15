@@ -1,14 +1,16 @@
+### 本篇笔记总结自[git官网](https://git-scm.com/)、[廖雪峰Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)、[Learn Git in 20 Minutes](https://www.youtube.com/watch?v=Y9XZQO1n_7c)
+```
 git status
 
 git add readme.txt
 
-git commit(先按i调出插入，然后按esc结束，输入:wq结束)
+git commit(先按i调出插入，输入提交信息，esc结束，:wq退出)
 
 git --version
 
 git config user.email "zhenghaochuan9421@gmail.com"
 
-git config user.name "HaoChuan"
+git config user.name "HaoChuan9421"
 
 git config --global user.email "zhenghaochuan9421@gmail.com"(全局配置)
 
@@ -16,19 +18,27 @@ git init
 
 git commit -m "说明文字"
 
-git commit -a -m "说明文字"(修改原本存在的文件不需要先git add，自动添加)
+git commit -a -m "说明文字"(自动添加，修改原本存在的文件不需要先git add)
 
 git log
 
 git log --pretty=oneline(单行显示)
 
+git log --graph(图形化显示)
+
+git log --abbrev-commit(commit缩写为七位)
+
+git log --graph --pretty=oneline --abbrev-commit(合并上述)
+
 git add .(添加全部)
+
+git add "*.txt"(通配符，选择所有txt格式文件，包括文件夹里面的)
 
 git rm --cached index.txt(添加index.txt到stage之后将它移除)
 
 git checkout -- index.txt(修改了index.txt，但未add，未commit，将它恢复到上一次add或者commit的状态)
 
-git reset HEAD index.txt(unstage操作)
+git reset HEAD index.txt(unstage操作，回到最后一次提交的版本)
 
 rm index.txt(删除index.txt，可以使用checkout恢复，这种删除等同于直接从硬盘删除)
 
@@ -77,3 +87,4 @@ git diff HEAD -- index.txt(查看指定文件index.txt的修改)
 $ ssh-keygen -t rsa -C "youremail@example.com"(生成ssh，一路回车，使用默认值即可，无需设置密码，再把pub添加到GitHub)
 
 git clone git@github.com:HaoChuan9421/GitNotes.git(克隆远端仓库)
+```
