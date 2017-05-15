@@ -64,7 +64,13 @@ git add . (先添加)
 
 git stash (隐藏)
 
-git stash apply (显现)
+git stash list(查看藏匿区)
+
+git stash apply (显现但是不删除藏匿区)
+
+git stash drop (删除藏匿区)
+
+git stash pop(显示同时删除藏匿区)
 
 git remote add origin https://git.coding.net/fmw/Miaopiao.git
 
