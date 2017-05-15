@@ -60,6 +60,8 @@ git merge MyBranch (合并分支)
 
 git branch -d MyBranch(删除分支)
 
+git branch -D MyBranch(删除未合并的分支时系统会提示不让删除，这时使用该命令强行删除)
+
 git add . (先添加)
 
 git stash (隐藏)
@@ -99,4 +101,8 @@ vi index.md(在git bash中编辑文件)
 git merge --no-ff -m '提示信息' MyBranch (才用非Fast forward模式合并，合并后可以看出曾经做过合并)
 
 git创建分支时，会以当前所在分支为模版创建
+
+git remote -v (查看远端仓库信息，如果没有push权限会只显示fetch)
+
+git push origin dev(push到远端仓库dev分支)
 ```
