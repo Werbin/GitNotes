@@ -77,5 +77,3 @@ git diff HEAD -- index.txt(查看指定文件index.txt的修改)
 $ ssh-keygen -t rsa -C "youremail@example.com"(生成ssh，一路回车，使用默认值即可，无需设置密码，再把pub添加到GitHub)
 
 git clone git@github.com:HaoChuan9421/GitNotes.git(克隆远端仓库)
-
-这是测试切换分支加的
