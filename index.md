@@ -1,5 +1,7 @@
-### 本篇笔记总结自[git官网](https://git-scm.com/)、[廖雪峰Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)、[Learn Git in 20 Minutes](https://www.youtube.com/watch?v=Y9XZQO1n_7c)
+### 本篇笔记总结自[git官网](https://git-scm.com/)、[Learn Git in 20 Minutes](https://www.youtube.com/watch?v=Y9XZQO1n_7c)、[廖雪峰Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)。只是简单的起步笔记，满足日常的工作而已。
 ```
+git init
+
 git status
 
 git add readme.txt
@@ -8,13 +10,13 @@ git commit(先按i调出插入，输入提交信息，esc结束，:wq退出)
 
 git --version
 
-git config user.email "zhenghaochuan9421@gmail.com"
+git config user.email/user.name (查看用户名/邮箱)
 
-git config user.name "HaoChuan9421"
+git config user.email "zhenghaochuan9421@gmail.com"(设置修改修改邮箱)
+
+git config user.name "HaoChuan9421"(设置修改修改用户名)
 
 git config --global user.email "zhenghaochuan9421@gmail.com"(全局配置)
-
-git init
 
 git commit -m "说明文字"
 
@@ -32,7 +34,7 @@ git log --graph --pretty=oneline --abbrev-commit(合并上述)
 
 git add .(添加全部)
 
-git add "*.txt"(通配符，选择所有txt格式文件，包括文件夹里面的)
+git add "*.txt"(通配符，选择所有txt格式文件，包括文件夹内的)
 
 git rm --cached index.txt(添加index.txt到stage之后将它移除)
 
@@ -42,9 +44,9 @@ git reset HEAD index.txt(unstage操作，回到最后一次提交的版本)
 
 rm index.txt(删除index.txt，可以使用checkout恢复，这种删除等同于直接从硬盘删除)
 
-git rm index.txt(删除不可恢复，只可以提交)
+git rm index.txt(删除不可恢复，只可以提交删除操作)
 
-touch .gitignore (添加忽略文件)
+touch .gitignore (生成忽略文件)
 
 cat index.txt(查看index.txt文件的具体内容)
 
@@ -56,21 +58,21 @@ git checkout -b MyBranch (创建并切换分支，相当于合并上面两步)
 
 git checkout master (切换到主分支)
 
-git merge MyBranch (合并分支)
+git merge MyBranch (当前分支合并MyBranch分支)
 
 git branch -d MyBranch(删除分支)
 
-git branch -D MyBranch(删除未合并的分支时系统会提示不让删除，这时使用该命令强行删除)
+git branch -D MyBranch(删除未合并的分支时系统会提示不让删除，该命令强行删除)
 
 git add . (先添加)
 
-git stash (隐藏)
+git stash (隐藏add的内容)
 
 git stash list(查看藏匿区)
 
 git stash apply (显现但是不删除藏匿区)
 
-git stash drop (删除藏匿区)
+git stash drop (删除藏匿区,藏匿区的文件也会删除)
 
 git stash pop(显示同时删除藏匿区)
 
@@ -98,7 +100,7 @@ git clone git@github.com:HaoChuan9421/GitNotes.git(克隆远端仓库)
 
 vi index.md(在git bash中编辑文件)
 
-git merge --no-ff -m '提示信息' MyBranch (才用非Fast forward模式合并，合并后可以看出曾经做过合并)
+git merge --no-ff -m '提示信息' MyBranch (采用非Fast forward模式合并，合并后可以看出曾经做过合并)
 
 git创建分支时，会以当前所在分支为模版创建
 
@@ -110,7 +112,7 @@ git checkout -b dev origin/dev (git clone下来的只有master分支，如果需
 
 git branch --set-upstream dev origin/dev (设置本地分支与远端分支的链接，否则无法pull)
 
-git branch --set-upstream-to=origin/test(远端有分支，本地没分支时，现在本地创建，然后关联到远端)
+git branch --set-upstream-to=origin/test(远端有分支，本地没分支时，先在本地创建，然后关联到远端)
 
 git pull (拉取远端最新的代码)
 ```
