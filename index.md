@@ -115,4 +115,8 @@ git branch --set-upstream dev origin/dev (设置本地分支与远端分支的�
 git branch --set-upstream-to=origin/test(远端有分支，本地没分支时，先在本地创建，然后关联到远端)
 
 git pull (拉取远端最新的代码)
+
+git push origin --delete test(删除远端test分支)
+
+git push origin :test(删除远端test分支)
 ```
