@@ -6,15 +6,15 @@ git status
 
 git add readme.txt
 
-git commit(先按i调出插入，输入提交信息，esc结束，:wq退出)
+git commit(先按i调出插入，输入说明文字，esc结束，:wq退出)
 
 git --version
 
 git config user.email/user.name (查看用户名/邮箱)
 
-git config user.email "zhenghaochuan9421@gmail.com"(设置修改修改邮箱)
+git config user.email "zhenghaochuan9421@gmail.com"(设置修改邮箱)
 
-git config user.name "HaoChuan9421"(设置修改修改用户名)
+git config user.name "HaoChuan9421"(设置修改用户名)
 
 git config --global user.email "zhenghaochuan9421@gmail.com"(全局配置)
 
@@ -119,4 +119,22 @@ git pull (拉取远端最新的代码)
 git push origin --delete test(删除远端test分支)
 
 git push origin :test(删除远端test分支)
+
+git tag(查看标签)
+
+git tag v1.0(打标签，默认打在最新一次的commit上)
+
+git tag v0.9 fec145a(给指定的commit打标签，需要commit的版本号，可先使用git log --pretty=oneline --abbrev-commit查看)
+
+git show v1.0(查看标签)
+
+git tag -a v1.1 -m "version 1.1 released" 3628164(打带说明文字的标签，用-a指定标签名，-m指定说明文字)
+
+git tag -d v1.0(删除指定标签，删除标签的操作只是本地操作，不会推送到远程)
+
+git push origin v1.0(推送某个标签到远程)
+
+git push origin --tags(一次性推送全部尚未推送到远程的本地标签)
+
+git push origin :refs/tags/v0.9(删除远程的标签，需要先删除本地的标签git tag -d v0.9，再执行这一步)
 ```
